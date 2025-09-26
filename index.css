@@ -1,0 +1,353 @@
+:root {
+    --primary: #1a0b2e;
+    --secondary: #4c2a85;
+    --text-primary: #ffffff;
+    --text-secondary: #7127BA;
+    --section-primary: #11071f;
+}
+
+@font-face {
+    font-family: 'prop';
+    src: url('fonts/PROPAGAN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caro';
+    src: url('fonts/carolingia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'old new';
+    src: url('fonts/OldNewspaperTypes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper-container {
+    padding: 0px 5rem;
+}
+
+.header {
+    background-color: var(--primary);
+    padding: 15px 0px;
+    color: var(--text-primary);
+    font-family: 'prop';
+}
+
+.whole_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-menu {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 50px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.list-item {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+}
+.list-item  a{
+    
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.list-item::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--text-primary);
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+.list-item a:hover {
+    color: var(--text-secondary);
+}
+
+.list-item:hover::before {
+    width: 100%;
+    background-color: var(--secondary);
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.whole_section {
+    background-color: var(--section-primary);
+}
+
+.hero-section {
+    height: 80vh;
+    display: flex;
+    /* max-width: 600px; */
+}
+
+.hero-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right {
+    width: 60%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    font-family: 'prop';
+    color: white;
+}
+
+.title-1 {
+    font-size: 19px;
+}
+
+.slogan {
+    margin-top: 40px;
+
+}
+
+.slogan p:nth-child(1) {
+    font-size: 17px;
+}
+
+.slogan p:nth-child(2) {
+    font-size: 50px;
+}
+
+.slogan p:nth-child(3) {
+    font-size: 11px;
+}
+
+.highlight {
+    color: var(--text-secondary);
+}
+
+.image-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    /* background: radial-gradient(circle, red 50%,#552143 50%); */
+    background: radial-gradient(circle, #813bae 90%, #2f70de 10%);
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(30px);
+}
+
+.image-wrapper img {
+    width: 200px;
+    height: 250px;
+    /* object-fit: cover; */
+    position: relative;
+    z-index: 1;
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); */
+}
+
+.about-section {
+    padding: 3rem 0px;
+    color: var(--text-primary);
+    font-family: 'prop';
+    text-align: center;
+}
+
+.about-section p{
+    font-size: 50px;
+}
+.about-wrapper{
+    display: flex;
+
+}
+.about-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-left p{
+    font-size: 17px;
+    text-align: justify;
+}
+.about-right{
+    width: 50%;
+}
+.work-section{
+    padding: 1rem 0px;
+}
+@font-face {
+    font-family: 'mid';
+    src: url('fonts/Midnight\ Gelactic\ DEMO\ VERSION.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.work-section p{
+    font-family: 'mid';
+    font-size: 50px;
+    text-align: center;
+    color: var(--text-primary);
+    padding: 2rem 0px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-rows: 300px; */
+  gap: 15px; /* space between images */
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  transition: all 0.6s;
+}
+
+.gallery img:hover {
+  transform: scale(0.8);
+  box-shadow:  0px 0px 30px 10px var(--text-secondary);
+}
+
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 150px;
+  min-height: 30px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color:var(--text-primary);
+  background: var(--text-secondary);
+background: linear-gradient(90deg,var(--secondary) 0%,var(--text-secondary) 100%);
+  border: none;
+  border-radius: 1000px;
+  /* box-shadow: 3px 3px 6px var(--text-secondary); */
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(150px + 12px);
+  min-height: calc(30px + 12px);
+  border: 3px solid var(--text-secondary);
+  box-shadow: 0 0 60px var(--text-secondary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, 
+.button:focus {
+  color: var(--text-primary);
+  transform: translateY(-6px);
+}
+
+.button:hover::before, 
+.button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 3px solid var(--text-secondary);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after, 
+.button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+
+
